@@ -45,10 +45,10 @@ const Dictaphone = ({
     return (
       <div>
         {listening ? (
-          <div className="card bg-warning text-left">
+          <div className="card bg-warning text-left transcription__text">
             {transcript
-              ? "Transcribing: " + transcript
-              : "Please speak to the mic"}
+              ? "Live transcribing: " + transcript
+              : "Wait for audio input..."}
           </div>
         ) : (
           <div className="card text-left">
@@ -90,7 +90,7 @@ Dictaphone.propTypes = {
 };
 
 const options = {
-  autoStart: true,
+  autoStart: false,
 };
 
 export default SpeechRecognition(options)(Dictaphone);

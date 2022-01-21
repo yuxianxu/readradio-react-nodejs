@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 /* Global Styles */
 :root {
   --primary-color: #544388;
-  --secondary-color: #E6532D;
+  --secondary-color: #e6532d;
   --dark-color: #333333;
   --light-color: #fff;
   --danger-color: #dc3545;
   --success-color: #28a745;
-  --info-color: #008C9F;
+  --info-color: #008c9f;
   --warning-color: #f0ad4e;
 }
 
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: #333;
   background-color: #fff;
@@ -79,7 +79,7 @@ a {
 
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: #ccc 1px dotted;height: fit-content;
   margin: 0.7rem 0;
 }
 
@@ -88,7 +88,6 @@ a {
 .margin {
   margin: 0.5rem;
 }
-
 
 .margin-1 {
   margin: 1rem;
@@ -124,7 +123,6 @@ a {
 .margin-y-3-auto {
   margin: 3rem auto;
 }
-
 
 /* For a circular image */
 .circular-image {
@@ -166,10 +164,10 @@ input {
   color: #888;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='file'],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
 select,
 textarea {
   display: block;
@@ -179,7 +177,7 @@ textarea {
   border: 2px solid var(--primary-color);
 }
 
-input[type='submit'],
+input[type="submit"],
 button {
   font: inherit;
 }
@@ -192,8 +190,6 @@ button {
   margin: 0.2rem 0;
 }
 
-
-
 .form-container {
   max-width: 700px;
   margin: 2rem auto;
@@ -201,7 +197,9 @@ button {
   padding: 2rem;
 }
 
-.form-container > h1, h2, h3 {
+.form-container > h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -336,7 +334,6 @@ button {
   color: #fff;
 }
 
-
 .btn-light,
 .bg-light,
 .badge-light,
@@ -345,8 +342,6 @@ button {
   color: #333;
 }
 
-
-
 .btn-dark,
 .bg-dark,
 .badge-dark,
@@ -354,8 +349,6 @@ button {
   background: var(--dark-color);
   color: #fff;
 }
-
-
 
 .btn-danger,
 .bg-danger,
@@ -397,7 +390,6 @@ button {
   color: #fff;
 }
 
-
 .btn:hover {
   opacity: 0.8;
 }
@@ -409,7 +401,6 @@ button {
 
 /* Floating Widget */
 
-
 .widget {
   height: auto;
   width: auto;
@@ -417,8 +408,7 @@ button {
   bottom: 2rem;
   right: 1rem;
   z-index: 10;
-  
-} 
+}
 
 /* Animation (Add After) */
 .item-enter {
@@ -442,7 +432,7 @@ button {
   .grid-4 {
     grid-template-columns: 1fr;
   }
-    /* Navbar */
+  /* Navbar */
   .navbar {
     display: block;
     text-align: center;
@@ -457,3 +447,68 @@ button {
     justify-content: center;
   }
 }
+
+.main__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.transcription {
+
+  &__container {
+    width: 80%;
+  }
+
+  &__text {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    background-color:aliceblue;
+    overflow-y:visible scroll  auto;
+    height: 5rem;
+  }
+}
+
+.radioList {
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+  width: 20%;
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      background-color: var(--info-color);
+      color: aliceblue;
+      margin: 1rem;
+      line-height: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: #888 5px 5px 5px;
+      border:none;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// .player-wrapper {
+//   width: 10px;
+//   height: 10px;
+// }
+
+.react-player {
+  width: 10%;
+  height: 10%;
+}
+
+// #hlsjsvod {
+//   background-image: url(https://images.unsplash.com/photo-1573496358349-d97974b2339b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80);
+//   background-size: cover;
+// /*   background-color: #f60; */
+// }
+
+// https://cbcliveradio-lh.akamaihd.net/i/CBCR1_VCR@314572/master.m3u8
