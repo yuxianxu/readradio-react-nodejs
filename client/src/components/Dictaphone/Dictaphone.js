@@ -23,8 +23,14 @@ const Dictaphone = ({
     // eslint-disable-next-line
   }, [finalTranscript]);
 
+  const listenContinuouslyInChinese = () => startListening({
+    continuous: true,
+    language: 'zh-CN'
+  })
+
   if (!browserSupportsSpeechRecognition)
     return <div style={{ color: "red" }}>Browser does not supports this</div>;
+
   const start = () => {
     startListening();
     startListen();
@@ -61,9 +67,11 @@ const Dictaphone = ({
           </button>
         ) : (
           <>
-
             <button className="btn btn-success btn-block" onClick={start}>
               Start
+            </button>
+            <button className="btn btn-success btn-block" onClick={listenContinuouslyInChinese}>
+              Start CN
             </button>
           </>
         )}
@@ -91,6 +99,7 @@ Dictaphone.propTypes = {
 
 const options = {
   autoStart: false,
+  language: 'zh-CN'
 };
 
 export default SpeechRecognition(options)(Dictaphone);

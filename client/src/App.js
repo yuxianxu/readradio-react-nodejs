@@ -4,6 +4,16 @@ import Dictaphone from "./components/Dictaphone/Dictaphone";
 import Transcript from "./components/Dictaphone/Transcript";
 import DictaphoneState from "./context/dictaphone/DictaphoneState";
 import ReactPlayer from "react-player/file";
+import Calgary from "../src/assets/img/cbc-calgary.webp"
+import Vancouver from "../src/assets/img/cbc-Vancouver.png"
+import Montreal from "../src/assets/img/cbc-montreal.png"
+import Toronto from "../src/assets/img/cbc-toronto.webp"
+import Manitoba from "../src/assets/img/cbc-manitoba.png"
+import Ottawa from "../src/assets/img/cbc-ottawa.webp"
+import Edmonton from "../src/assets/img/cbc-edmonton.webp"
+import Saskatchewan from "../src/assets/img/cbc-saskatchewan.webp"
+import Thunder from "../src/assets/img/cbc-thunder-bay.png"
+
 
 class App extends Component {
   state = {
@@ -92,17 +102,15 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_CGY@372026/master.m3u8",
                     })
                   }
-                >
-                  CBC Calgary
+                ><img className="radioList__img" src={Calgary} alt="cbc calgary logo"/>
                 </button>
                 <button
                   onClick={() =>
                     this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_QQU@366526/master.m3u8",
+                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_VCR@314572/master.m3u8",
                     })
                   }
-                >
-                  CBC Quebec
+                ><img className="radioList__img" src={Vancouver} alt="cbc vancouver logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -110,8 +118,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_MTL@360544/master.m3u8",
                     })
                   }
-                >
-                  CBC Montreal
+                ><img className="radioList__img" src={Montreal} alt="cbc montreal logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -119,8 +126,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8",
                     })
                   }
-                >
-                  CBC Toronto
+                ><img className="radioList__img" src={Toronto} alt="cbc toronto logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -128,8 +134,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_WPG@384111/master.m3u8",
                     })
                   }
-                >
-                  CBC Winnipeg
+                ><img className="radioList__img" src={Manitoba} alt="cbc manitoba logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -137,8 +142,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_OTT@348188/master.m3u8",
                     })
                   }
-                >
-                  CBC Ottawa
+                ><img className="radioList__img" src={Ottawa} alt="cbc ottawa logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -146,8 +150,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_EDM@372985/master.m3u8",
                     })
                   }
-                >
-                  CBC Edmonton
+                ><img className="radioList__img" src={Edmonton} alt="cbc edmonton logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -155,8 +158,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_REG@118346/master.m3u8",
                     })
                   }
-                >
-                  CBC Regina
+                ><img className="radioList__img" src={Saskatchewan} alt="cbc saskatchewan logo"/>
                 </button>
                 <button
                   onClick={() =>
@@ -164,8 +166,7 @@ class App extends Component {
                       url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TBA@366707/master.m3u8",
                     })
                   }
-                >
-                  CBC Thunder Bay
+                ><img className="radioList__img" src={Thunder} alt="cbc thunder bay logo"/>
                 </button>
               </td>
               <div className="player-wrapper">
@@ -197,10 +198,10 @@ class App extends Component {
                   onProgress={this.handleProgress}
                   onDuration={this.handleDuration}
                 />
-                {/* <button onClick={this.handleStop}>Stop</button>
-                <button onClick={this.handlePlayPause}>
-                  {playing ? "Pause" : "Play"}
-                </button> */}
+                {/* <button onClick={this.handleStop}>Stop</button> */}
+                <button className="player__pause" onClick={this.handlePlayPause}>
+                  {playing ? "Pause ⏸️  " : "Play ▶️"}
+                </button>
               </div>
             </section>
           </div>

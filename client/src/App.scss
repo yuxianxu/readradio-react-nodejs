@@ -2,13 +2,13 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #544388;
+  --primary-color: #1d3557;
   --secondary-color: #e6532d;
   --dark-color: #333333;
-  --light-color: #fff;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
-  --info-color: #008c9f;
+  --light-color: #457b9d;
+  --danger-color: #e63946;
+  --success-color: #f1faee;
+  --info-color: #a8dadc;
   --warning-color: #f0ad4e;
 }
 
@@ -79,7 +79,8 @@ a {
 
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;height: fit-content;
+  border: #ccc 1px dotted;
+  height: fit-content;
   margin: 0.7rem 0;
 }
 
@@ -454,7 +455,6 @@ h3 {
 }
 
 .transcription {
-
   &__container {
     width: 80%;
   }
@@ -462,10 +462,25 @@ h3 {
   &__text {
     color: var(--primary-color);
     font-size: 1.5rem;
-    background-color:aliceblue;
-    overflow-y:visible scroll  auto;
-    height: 5rem;
+    background-color: aliceblue;
   }
+}
+
+.player__pause {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.2em;
+  width: 50%;
+  background-color: var(--light-color);
+  color: #fff;
+  border: none;
+  box-shadow: #888 5px 5px 5px;
+  height: 2rem;
+  line-height: 2rem;
+  width: 80%;
+  overflow: hidden;
 }
 
 .radioList {
@@ -474,12 +489,24 @@ h3 {
   flex-direction: column;
   width: 20%;
 
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
   &__buttons {
     display: flex;
     flex-direction: column;
 
     button {
-      background-color: var(--info-color);
+      display: flex;
+      height: 2rem;
+      overflow: hidden;
+      object-fit: cover;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      background-color: #fff;
       color: aliceblue;
       margin: 1rem;
       line-height: 2rem;
@@ -487,7 +514,7 @@ h3 {
       cursor: pointer;
       border-radius: 15px;
       box-shadow: #888 5px 5px 5px;
-      border:none;
+      border: none;
       &:hover {
         transform: scale(1.2);
       }
