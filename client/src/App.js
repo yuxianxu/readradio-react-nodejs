@@ -1,19 +1,22 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route, Switch, withRouter } from "react-router-dom";
 import "./App.scss";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Dictaphone from "./components/Dictaphone/Dictaphone";
 import Transcript from "./components/Dictaphone/Transcript";
 import DictaphoneState from "./context/dictaphone/DictaphoneState";
+import MyNotes from "./Pages/MyNotes/MyNotes";
 import ReactPlayer from "react-player/file";
-import Calgary from "../src/assets/img/cbc-calgary.webp"
-import Vancouver from "../src/assets/img/cbc-Vancouver.png"
-import Montreal from "../src/assets/img/cbc-montreal.png"
-import Toronto from "../src/assets/img/cbc-toronto.webp"
-import Manitoba from "../src/assets/img/cbc-manitoba.png"
-import Ottawa from "../src/assets/img/cbc-ottawa.webp"
-import Edmonton from "../src/assets/img/cbc-edmonton.webp"
-import Saskatchewan from "../src/assets/img/cbc-saskatchewan.webp"
-import Thunder from "../src/assets/img/cbc-thunder-bay.png"
-
+import Calgary from "../src/assets/img/cbc-calgary.webp";
+import Vancouver from "../src/assets/img/cbc-Vancouver.png";
+import Montreal from "../src/assets/img/cbc-montreal.png";
+import Toronto from "../src/assets/img/cbc-toronto.webp";
+import Manitoba from "../src/assets/img/cbc-manitoba.png";
+import Ottawa from "../src/assets/img/cbc-ottawa.webp";
+import Edmonton from "../src/assets/img/cbc-edmonton.webp";
+import Saskatchewan from "../src/assets/img/cbc-saskatchewan.webp";
+import Thunder from "../src/assets/img/cbc-thunder-bay.png";
 
 class App extends Component {
   state = {
@@ -84,129 +87,186 @@ class App extends Component {
     const SEPARATOR = " · ";
 
     return (
-      <DictaphoneState>
-        <div className="container text-center">
-          <h1>Live transcription Radio</h1>
-          <div className="main__container">
-            <section className="transcription__container">
-              <Transcript />
-              <Dictaphone browserSupportsSpeechRecognition />
-            </section>
+      <BrowserRouter>
+        <Header />
+        <DictaphoneState>
+          <div className="container text-center">
+            <h1>Live transcription Radio</h1>
+            <div className="main__container">
+              <section className="transcription__container">
+                <Dictaphone browserSupportsSpeechRecognition />
+                <Transcript />
+              </section>
 
-            <section className="radioList">
-              <th>Local Radio Station </th>
-              <td className="radioList__buttons">
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_CGY@372026/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Calgary} alt="cbc calgary logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_VCR@314572/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Vancouver} alt="cbc vancouver logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_MTL@360544/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Montreal} alt="cbc montreal logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Toronto} alt="cbc toronto logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_WPG@384111/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Manitoba} alt="cbc manitoba logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_OTT@348188/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Ottawa} alt="cbc ottawa logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_EDM@372985/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Edmonton} alt="cbc edmonton logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_REG@118346/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Saskatchewan} alt="cbc saskatchewan logo"/>
-                </button>
-                <button
-                  onClick={() =>
-                    this.setState({
-                      url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TBA@366707/master.m3u8",
-                    })
-                  }
-                ><img className="radioList__img" src={Thunder} alt="cbc thunder bay logo"/>
-                </button>
-              </td>
-              <div className="player-wrapper">
-                <ReactPlayer
-                  ref={this.ref}
-                  className="react-player"
-                  width="5%"
-                  height="5%"
-                  url={url}
-                  pip={pip}
-                  playing={playing}
-                  controls={controls}
-                  light={light}
-                  loop={loop}
-                  playbackRate={playbackRate}
-                  volume={volume}
-                  muted={muted}
-                  onReady={() => console.log("onReady")}
-                  onStart={() => console.log("onStart")}
-                  onPlay={this.handlePlay}
-                  onEnablePIP={this.handleEnablePIP}
-                  onDisablePIP={this.handleDisablePIP}
-                  onPause={this.handlePause}
-                  onBuffer={() => console.log("onBuffer")}
-                  onPlaybackRateChange={this.handleOnPlaybackRateChange}
-                  onSeek={(e) => console.log("onSeek", e)}
-                  onEnded={this.handleEnded}
-                  onError={(e) => console.log("onError", e)}
-                  onProgress={this.handleProgress}
-                  onDuration={this.handleDuration}
-                />
-                {/* <button onClick={this.handleStop}>Stop</button> */}
-                <button className="player__pause" onClick={this.handlePlayPause}>
-                  {playing ? "Pause ⏸️  " : "Play ▶️"}
-                </button>
-              </div>
-            </section>
+              <section className="radioList">
+                <th>Local Radio Station </th>
+                <td className="radioList__buttons">
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_CGY@372026/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Calgary}
+                      alt="cbc calgary logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_VCR@314572/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Vancouver}
+                      alt="cbc vancouver logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_MTL@360544/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Montreal}
+                      alt="cbc montreal logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Toronto}
+                      alt="cbc toronto logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_WPG@384111/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Manitoba}
+                      alt="cbc manitoba logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_OTT@348188/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Ottawa}
+                      alt="cbc ottawa logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_EDM@372985/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Edmonton}
+                      alt="cbc edmonton logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_REG@118346/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Saskatchewan}
+                      alt="cbc saskatchewan logo"
+                    />
+                  </button>
+                  <button
+                    onClick={() =>
+                      this.setState({
+                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TBA@366707/master.m3u8",
+                      })
+                    }
+                  >
+                    <img
+                      className="radioList__img"
+                      src={Thunder}
+                      alt="cbc thunder bay logo"
+                    />
+                  </button>
+                </td>
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    ref={this.ref}
+                    className="react-player"
+                    width="5%"
+                    height="5%"
+                    url={url}
+                    pip={pip}
+                    playing={playing}
+                    controls={controls}
+                    light={light}
+                    loop={loop}
+                    playbackRate={playbackRate}
+                    volume={volume}
+                    muted={muted}
+                    onReady={() => console.log("onReady")}
+                    onStart={() => console.log("onStart")}
+                    onPlay={this.handlePlay}
+                    onEnablePIP={this.handleEnablePIP}
+                    onDisablePIP={this.handleDisablePIP}
+                    onPause={this.handlePause}
+                    onBuffer={() => console.log("onBuffer")}
+                    onPlaybackRateChange={this.handleOnPlaybackRateChange}
+                    onSeek={(e) => console.log("onSeek", e)}
+                    onEnded={this.handleEnded}
+                    onError={(e) => console.log("onError", e)}
+                    onProgress={this.handleProgress}
+                    onDuration={this.handleDuration}
+                  />
+                  {/* <button onClick={this.handleStop}>Stop</button> */}
+                  <button
+                    className="player__pause"
+                    onClick={this.handlePlayPause}
+                  >
+                    {playing ? "Pause ⏸️  " : "Play ▶️"}
+                  </button>
+                </div>
+              </section>
+            </div>
           </div>
-        </div>
-      </DictaphoneState>
+        </DictaphoneState>
+        <Switch>
+          <Route exact path="/mynotes" component={MyNotes}/>
+          {/* <Route exact path="/support" component={Support}/> */}
+
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     );
   }
 }
