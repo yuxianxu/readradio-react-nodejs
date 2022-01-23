@@ -2,16 +2,19 @@ import React, { useContext, useEffect, Fragment } from "react";
 import DictaphoneContext from "../../context/dictaphone/dictaphoneContext";
 import "./transcript.css";
 import isChrome from "../../utils/checkIfChrome";
+import axios from "axios";
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 const Transcript = () => {
   const dictaphoneContext = useContext(DictaphoneContext);
-  const { transcript, listening } = dictaphoneContext;
+  const { transcript, listening, clearTranscript } = dictaphoneContext;
   let end = null;
 
   const content = transcript.length ? (
     transcript.map((text, key) => (
       <div className="card" key={key}>
-        <div> {new Date().toLocaleString()} </div>
+        {/* <div> {new Date().toLocaleString()} </div> */}
         <div> {text} </div>
       </div>
     ))
@@ -30,6 +33,22 @@ const Transcript = () => {
     scroll();
     // eslint-disable-next-line
   }, [transcript]);
+
+  console.log(transcript);
+
+  const saveNotes = () => {
+
+    // console.log(content)
+    
+    axios
+    .post(`${API_URL}/mynotes`, {
+      transcript: transcript
+    })
+    .then((res) => console.log(res));
+
+    clearTranscript();
+  };
+
   return (
     <Fragment>
       {isChrome ? (
@@ -41,6 +60,7 @@ const Transcript = () => {
               end = el;
             }}
           />
+          <button onClick={saveNotes}>Save notes</button>
         </div>
       ) : (
         <div></div>

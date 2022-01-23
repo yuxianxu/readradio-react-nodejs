@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import SpeechRecognition from "react-speech-recognition";
 import DictaphoneContext from "../../context/dictaphone/dictaphoneContext";
 import isChrome from "../../utils/checkIfChrome";
+import axios from 'axios';
 
 const Dictaphone = ({
   transcript,
@@ -20,6 +21,7 @@ const Dictaphone = ({
   useEffect(() => {
     updateTranscript(finalTranscript);
     resetTranscript();
+    // console.log(`final: ${finalTranscript}`);
     // eslint-disable-next-line
   }, [finalTranscript]);
 
@@ -42,10 +44,26 @@ const Dictaphone = ({
     stopListen();
   };
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
+  // const transcriptContent = document.getElementById("transcript"); 
+  // console.log(transcriptContent)
+
+  
   const reset = () => {
+
+    // console.log(content)
+    
+    axios
+    .post(`${API_URL}/mynotes`, {
+      transcript: content
+    })
+    .then((res) => console.log(res));
+
     clearTranscript();
   };
-  console.log(isChrome);
+
+  // console.log(isChrome);
   let content = null;
   if (isChrome) {
     return (
