@@ -23,6 +23,18 @@ body {
   font-size: 1rem;
   color: #333;
   background-color: #fff;
+  background-image: url('./assets/img/background-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center
+}
+
+h1 {
+  color: #fff;
+}
+
+th {
+  color: #fff;
 }
 
 ul {
@@ -79,7 +91,9 @@ a {
 
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  color: #fff;
+  border: #ccc 0.1px dotted;
+  border-radius: 10px;
   height: fit-content;
   margin: 0.7rem 0;
 }
@@ -202,6 +216,7 @@ button {
 h2,
 h3 {
   text-align: center;
+  color: #fff;
 }
 
 /* Navbar */
@@ -267,8 +282,8 @@ h3 {
 
 .btn {
   display: inline-block;
-  background: var(--light-color);
-  color: #333;
+  background: var(--primary-color);
+  color: #fff;
   padding: 0.4rem 1.3rem;
   font-size: 18px;
   border: none;
@@ -306,7 +321,7 @@ h3 {
   padding: 0.2rem 0.7rem;
   text-align: center;
   margin: 0.3rem;
-  background: var(--light-color);
+  background: var(--primary-color);
   color: #333;
   border-radius: 5px;
 }
@@ -363,7 +378,7 @@ h3 {
 .bg-success,
 .badge-success,
 .alert-success {
-  background: var(--success-color);
+  background: var(--dark-color);
   color: #fff;
 }
 
@@ -379,7 +394,7 @@ h3 {
 .bg-info,
 .badge-info,
 .alert-info {
-  background: var(--info-color);
+  background: var(--dark-color);
   color: #fff;
 }
 
@@ -455,14 +470,38 @@ h3 {
 }
 
 .transcription {
+
+  &__time {
+    color: #fff;
+    justify-content: flex-end;
+    margin: 1rem 0 0 35rem;
+  }
+
+  &__save-button {
+    background-color:#fff;
+    border: none;
+    height: 1.5rem;
+    color: var(--dark-color);
+    font-weight: 500; 
+    border-radius: 15px;
+    cursor: pointer;
+    width: 6rem;
+    justify-content: flex-end;
+    margin: 1rem 3rem 0 38rem;
+  }
+
   &__container {
     width: 80%;
   }
 
   &__text {
-    color: var(--primary-color);
+    color: #fff;
     font-size: 1.5rem;
-    background-color: aliceblue;
+    background-color: initial;
+  }
+
+  &__notes {
+    color:#fff
   }
 }
 
@@ -472,14 +511,13 @@ h3 {
   border-radius: 15px;
   font-weight: 700;
   font-size: 1.2em;
-  width: 50%;
-  background-color: var(--light-color);
+  background-color:rgb(255, 255, 255);
   color: #fff;
   border: none;
   box-shadow: #888 5px 5px 5px;
   height: 2rem;
   line-height: 2rem;
-  width: 80%;
+  width: 20%;
   overflow: hidden;
 }
 

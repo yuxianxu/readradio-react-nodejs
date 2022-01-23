@@ -247,7 +247,7 @@ class Homepage extends Component {
                     className="player__pause"
                     onClick={this.handlePlayPause}
                   >
-                    {playing ? "Pause ⏸️  " : "Play ▶️"}
+                    {playing ? "⏸️ " : "▶️"}
                   </button>
                 </div>
               </section>

@@ -31,10 +31,10 @@ class MyNotes extends Component {
             <div>
                 {this.state.notesList.map((note) => {
                     let normalDate = new Date(note.timestamp);
-                    let noteDate = normalDate.toLocaleDateString("en-US");
+                    let noteDate = normalDate.toLocaleString("en-US");
 
                     return(
-                        <li key={note.id}>
+                        <li key={note.id} className='mynotes__list'>
                             <div>
                                 {noteDate}
                             </div>

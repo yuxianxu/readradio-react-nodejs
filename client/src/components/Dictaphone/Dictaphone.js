@@ -50,18 +50,18 @@ const Dictaphone = ({
   // console.log(transcriptContent)
 
   
-  const reset = () => {
+  // const reset = () => {
 
-    // console.log(content)
+  //   // console.log(content)
     
-    axios
-    .post(`${API_URL}/mynotes`, {
-      transcript: content
-    })
-    .then((res) => console.log(res));
+  //   axios
+  //   .post(`${API_URL}/mynotes`, {
+  //     transcript: content
+  //   })
+  //   .then((res) => console.log(res));
 
-    clearTranscript();
-  };
+  //   clearTranscript();
+  // };
 
   // console.log(isChrome);
   let content = null;
@@ -71,7 +71,7 @@ const Dictaphone = ({
         {listening ? (
           <div className="card bg-warning text-left transcription__text">
             {transcript
-              ? "Live transcribing: " + transcript
+              ? "(Live transcribing): " + transcript
               : "Wait for audio input..."}
           </div>
         ) : (
@@ -79,7 +79,7 @@ const Dictaphone = ({
             Here, you can see what are being transcribed.
           </div>
         )}
-        {listening ? (
+        {/* {listening ? (
           <button className="btn btn-danger btn-block" onClick={stop}>
             Stop
           </button>
@@ -92,10 +92,10 @@ const Dictaphone = ({
               Start CN
             </button>
           </>
-        )}
-        <button className="btn btn-info btn-block" onClick={reset}>
+        )} */}
+        {/* <button className="btn btn-info btn-block" onClick={reset}>
           Reset
-        </button>
+        </button> */}
       </div>
     );
   } else {
@@ -116,7 +116,7 @@ Dictaphone.propTypes = {
 };
 
 const options = {
-  autoStart: false,
+  autoStart: true,
   language: 'zh-CN'
 };
 
