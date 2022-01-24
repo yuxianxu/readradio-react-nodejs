@@ -15,7 +15,7 @@
     "react-player": "^2.9.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "3.3.0",
-    "react-speech-recognition": "^2.0.4",
+    "react-speech-recognition": "^3.9.0",
     "react-transition-group": "^4.3.0",
     "sass": "^1.49.0",
     "speech-recognition-polyfill": "^0.0.5",

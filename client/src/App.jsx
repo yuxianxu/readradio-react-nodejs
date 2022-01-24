@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Homepage from "./Homepage";
 import MyNotes from "./Pages/MyNotes/MyNotes";
 import Login from "./Pages/Login";
+import InternationalList from "./components/InternationalList/InternationalList";
 
 
 const App = () => {
@@ -50,10 +51,13 @@ const App = () => {
           <Route
             path="/mynotes"
             element={user ? <MyNotes /> : <Navigate to="/login" />}
+          />                
+          <Route
+            path="/international"
+            element={user ? <InternationalList /> : <Navigate to="/login" />}
           />
           {/* <Route exact path="/support" component={Support}/> */}
         </Routes>
-        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );

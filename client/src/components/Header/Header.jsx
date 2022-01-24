@@ -18,6 +18,9 @@ const Header = ({ user }) => {
       <span className="listItem">
         <Link to="/mynotes">my notes</Link>
       </span>
+      <span className="listItem">
+        <Link to="/international">International</Link>
+      </span>
       {user ? (
         <ul className="list">
           <li className="listItem">
