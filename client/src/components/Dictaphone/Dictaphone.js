@@ -71,7 +71,7 @@ const Dictaphone = ({
         {listening ? (
           <div className="card bg-warning text-left transcription__text">
             {transcript
-              ? "(Live transcribing): " + transcript
+              ? "( Live transcribing ): " + transcript
               : "Wait for audio input..."}
           </div>
         ) : (

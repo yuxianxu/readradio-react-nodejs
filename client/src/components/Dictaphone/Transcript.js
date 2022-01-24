@@ -8,12 +8,13 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 const Transcript = () => {
   const dictaphoneContext = useContext(DictaphoneContext);
-  const { transcript, listening, clearTranscript, updateTranscript } = dictaphoneContext;
+  const { transcript, listening, clearTranscript, updateTranscript } =
+    dictaphoneContext;
   let end = null;
 
   const content = transcript.length ? (
     transcript.map((text, key) => (
-      <div className="card" key={key}>        
+      <div className="card" key={key}>
         <div> {text} </div>
       </div>
     ))
@@ -52,8 +53,11 @@ const Transcript = () => {
       {isChrome ? (
         <div className="text-left margin-y-2" id="transcript">
           <div className="transcription__notes"> - Transcription notes - </div>
-          {content}
-          <div className="transcription__time"> {new Date().toLocaleString()} </div>
+          <div className="transcription__content">{content}</div>
+          <div className="transcription__time">
+            {" "}
+            {new Date().toLocaleString()}{" "}
+          </div>
           <div
             style={{ float: "left", clear: "both" }}
             ref={(el) => {
