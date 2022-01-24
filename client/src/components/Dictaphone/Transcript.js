@@ -52,11 +52,11 @@ const Transcript = () => {
     <Fragment>
       {isChrome ? (
         <div className="text-left margin-y-2" id="transcript">
-          <div className="transcription__notes"> - Transcription notes - </div>
+          <div className="transcription__notes"> 📝  Transcription notes </div>
           <div className="transcription__content">{content}</div>
           <div className="transcription__time">
             {" "}
-            {new Date().toLocaleString()}{" "}
+            Last note was post on {new Date().toLocaleString()}{" "}
           </div>
           <div
             style={{ float: "left", clear: "both" }}

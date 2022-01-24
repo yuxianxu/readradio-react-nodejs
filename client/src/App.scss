@@ -12,6 +12,16 @@
   --warning-color: #f0ad4e;
 }
 
+html {
+  height: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,6 +29,15 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  max-height: 900px;
+  // border: 1px solid red;
+}
+
+.main {
+  min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: #333;
@@ -28,11 +47,12 @@ body {
   ), url('./assets/img/background-2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:center
+  background-position:center;
+  // border: 1px solid red;
 }
 
 h1 {
-  color: #fff;
+  color: rgba(162, 102, 185, 0.459);
 }
 
 th {
@@ -44,7 +64,7 @@ ul {
 }
 
 a {
-  color: var(--primary-color);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -52,7 +72,7 @@ a {
   max-width: 1000px;
   margin: auto;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 5rem 1rem 0rem 1rem;
 }
 
 .text-primary {
@@ -480,7 +500,7 @@ h3 {
   }
 
   &__save-button {
-    background-color:#fff;
+    background-color:rgb(155, 151, 151);
     border: none;
     height: 1.5rem;
     color: var(--dark-color);
@@ -502,7 +522,7 @@ h3 {
   }
 
   &__text {
-    color: #fff;
+    color: rgb(206, 170, 170);
     font-size: 1.5rem;
     background-color: initial;
   }
@@ -592,6 +612,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  width: 100%;
 }
 
 .logo {
@@ -614,6 +636,7 @@ h3 {
   font-weight: 500;
   margin: auto 20px;
   cursor: pointer;
+  color: #fff;
 }
 
 .avatar {

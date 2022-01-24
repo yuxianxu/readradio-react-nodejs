@@ -10,12 +10,12 @@ const Header = ({ user }) => {
 
   return (
     <div className="navbar">
-      <span className="header__text">
+      <span className="listItem">
         <Link className="link" to="/">
           <img src={Logo} className="logo" alt="logo" />
         </Link>
       </span>
-      <span className="header__text">
+      <span className="listItem">
         <Link to="/mynotes">my notes</Link>
       </span>
       {user ? (

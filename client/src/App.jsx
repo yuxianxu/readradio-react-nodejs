@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="main">
         <Header user={user} />
         <Routes>
           <Route path="/" exact element={<Homepage />} />
@@ -53,7 +53,7 @@ const App = () => {
           />
           {/* <Route exact path="/support" component={Support}/> */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
