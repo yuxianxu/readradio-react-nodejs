@@ -20,6 +20,8 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  object-fit: contain;
+  width: 100vw;
 }
 
 * {
@@ -32,7 +34,9 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  max-height: 900px;
+  height: 100vh;
+  max-width: 100vw;
+  // max-height: 900px;
   // border: 1px solid red;
 }
 
@@ -42,12 +46,14 @@ body {
   font-size: 1rem;
   color: #333;
   background-image: linear-gradient(
-    rgba(32, 32, 32, 0.605), 
-    rgba(14, 13, 13, 0.45)
-  ), url('./assets/img/background-2.jpg');
+      rgba(32, 32, 32, 0.605),
+      rgba(14, 13, 13, 0.45)
+    ),
+    url("./assets/img/background-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
+  overflow-y: scroll;
   // border: 1px solid red;
 }
 
@@ -69,7 +75,7 @@ a {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
   padding: 5rem 1rem 0rem 1rem;
@@ -84,7 +90,7 @@ a {
 }
 
 .text-danger {
-  color: var(--danger-color);
+  color: var(--primary-color);
 }
 
 .text-success {
@@ -99,14 +105,21 @@ a {
   color: var(--dark-color);
 }
 
+
 .text-center {
   text-align: center;
 }
 
 .text-left {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  // align-items: flex-end;
 }
 
+.text-reminder {
+  text-align: left;
+}
 .text-right {
   text-align: right;
 }
@@ -142,7 +155,7 @@ a {
   margin: 1rem 0;
 }
 .margin-y-2 {
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
 }
 .margin-y-3 {
   margin: 3rem 0;
@@ -329,7 +342,8 @@ h3 {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: 20%;
+  border-radius: 15px;
 }
 
 .btn-sm {
@@ -392,7 +406,7 @@ h3 {
 .bg-danger,
 .badge-danger,
 .alert-danger {
-  background: var(--danger-color);
+  background: #661053;
   color: #fff;
 }
 
@@ -489,32 +503,43 @@ h3 {
 .main__container {
   display: flex;
   flex-direction: row;
+  gap: 3rem;
 }
 
 .transcription {
-
   &__time {
     color: rgb(94, 90, 90);
     justify-content: flex-end;
-    margin: 1.5rem 0;
+    padding: 0.5rem 0;
+  }
+
+  &__initial-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   &__save-button {
-    background-color:rgb(155, 151, 151);
+    background-color: rgb(155, 151, 151);
     border: none;
     height: 1.5rem;
     color: var(--dark-color);
-    font-weight: 500; 
+    font-weight: 500;
     border-radius: 15px;
     font-weight: 400;
     cursor: pointer;
     width: 6rem;
     justify-content: flex-end;
     margin: 0.5rem 0;
+    align-self: flex-end;
+    border-radius: 56px;
+    margin-right: 1rem;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #969696, -5px -5px 25px #4e093f;
   }
 
   &__container {
-    width: 80%;
+    width: 100%;
   }
 
   &__content {
@@ -525,10 +550,17 @@ h3 {
     color: rgb(206, 170, 170);
     font-size: 1.5rem;
     background-color: initial;
+    overflow-y: scroll;
+  }
+
+  &__title {
+    color:var(--info-color);
   }
 
   &__notes {
-    color:#fff
+    color: #fff;
+    text-align: left;
+    padding: 1rem 0 1rem 0;
   }
 }
 
@@ -538,7 +570,7 @@ h3 {
   border-radius: 15px;
   font-weight: 700;
   font-size: 1.2em;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   color: #fff;
   border: none;
   box-shadow: #888 5px 5px 5px;
@@ -550,7 +582,6 @@ h3 {
 
 .radioList {
   display: flex;
-  margin-top: 3rem;
   flex-direction: column;
   width: 20%;
 
@@ -606,14 +637,15 @@ h3 {
 // https://cbcliveradio-lh.akamaihd.net/i/CBCR1_VCR@314572/master.m3u8
 
 .navbar {
-  height: 50px;
+  height: 3.5rem;
   background-color: rgba(102, 16, 83, 0.698);
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
+  padding: 0.25rem 3rem;
 }
 
 .logo {
@@ -736,12 +768,12 @@ h3 {
   height: 3rem;
 }
 
-
-.left,.right{
+.left,
+.right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 .right {
@@ -749,7 +781,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.center{
+.center {
   height: 100%;
   display: flex;
   align-items: center;
@@ -757,7 +789,7 @@ h3 {
   position: relative;
 }
 
-.or{
+.or {
   border: 2px solid lightgray;
   border-radius: 50%;
   padding: 10px;
@@ -766,7 +798,7 @@ h3 {
   font-weight: bold;
 }
 
-.line{
+.line {
   width: 0.5px;
   height: 70%;
   background-color: lightgray;
@@ -779,7 +811,7 @@ h3 {
   z-index: -1;
 }
 
-.loginButton{
+.loginButton {
   width: 150px;
   padding: 15px 25px;
   border-radius: 5px;
@@ -791,29 +823,29 @@ h3 {
   cursor: pointer;
 }
 
-.google{
+.google {
   background-color: #df4930;
 }
-.facebook{
+.facebook {
   background-color: #507cc0;
 }
-.github{
+.github {
   background-color: black;
 }
 
-.icon{
+.icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-input{
+input {
   width: 200px;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
 
-.submit{
+.submit {
   width: 200px;
   background-color: rgba(128, 0, 128, 0.671);
   color: white;
@@ -823,13 +855,13 @@ input{
   border-radius: 5px;
 }
 
-.loginTitle{
+.loginTitle {
   position: absolute;
   top: 150px;
-  color:lightgray
+  color: lightgray;
 }
 
-.link{
+.link {
   color: inherit;
   text-decoration: none;
 }

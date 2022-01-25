@@ -51,8 +51,7 @@ const Transcript = () => {
   return (
     <Fragment>
       {isChrome ? (
-        <div className="text-left margin-y-2" id="transcript">
-          <div className="transcription__notes"> 📝  Transcription notes </div>
+        <div className="text-left margin-y-2" id="transcript">          
           <div className="transcription__content">{content}</div>
           <div className="transcription__time">
             {" "}

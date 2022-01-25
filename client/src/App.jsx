@@ -4,7 +4,7 @@ import "./App.scss";
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Homepage from "./Homepage";
+import LocalList from "./components/LocalList/LocalList";
 import MyNotes from "./Pages/MyNotes/MyNotes";
 import Login from "./Pages/Login";
 import InternationalList from "./components/InternationalList/InternationalList";
@@ -43,7 +43,7 @@ const App = () => {
       <div className="main">
         <Header user={user} />
         <Routes>
-          <Route path="/" exact element={<Homepage />} />
+          <Route path="/local/*" element={<LocalList />} />
           <Route
             path="/login"
             element={user ? <Navigate to="/" /> : <Login />}
@@ -53,7 +53,7 @@ const App = () => {
             element={user ? <MyNotes /> : <Navigate to="/login" />}
           />                
           <Route
-            path="/international"
+            path="/international/*"
             element={user ? <InternationalList /> : <Navigate to="/login" />}
           />
           {/* <Route exact path="/support" component={Support}/> */}

@@ -16,10 +16,13 @@ const Header = ({ user }) => {
         </Link>
       </span>
       <span className="listItem">
-        <Link to="/mynotes">my notes</Link>
+        <Link to="/international">International</Link>
       </span>
       <span className="listItem">
-        <Link to="/international">International</Link>
+        <Link to="/local">Local</Link>
+      </span>
+      <span className="listItem">
+        <Link to="/mynotes">my notes</Link>
       </span>
       {user ? (
         <ul className="list">

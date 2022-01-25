@@ -1,20 +1,22 @@
 import React, { Component } from "react";
-import "./App.scss";
-import Dictaphone from "./components/Dictaphone/Dictaphone";
-import Transcript from "./components/Dictaphone/Transcript";
-import DictaphoneState from "./context/dictaphone/DictaphoneState";
+import "../../App.scss";
+import { Link } from "react-router-dom";
+import Dictaphone from "../Dictaphone/Dictaphone";
+import Transcript from "../Dictaphone/Transcript";
+import DictaphoneState from "../../context/dictaphone/DictaphoneState";
 import ReactPlayer from "react-player/file";
-import Calgary from "../src/assets/img/cbc-calgary.webp";
-import Vancouver from "../src/assets/img/cbc-Vancouver.png";
-import Montreal from "../src/assets/img/cbc-montreal.png";
-import Toronto from "../src/assets/img/cbc-toronto.webp";
-import Manitoba from "../src/assets/img/cbc-manitoba.png";
-import Ottawa from "../src/assets/img/cbc-ottawa.webp";
-import Edmonton from "../src/assets/img/cbc-edmonton.webp";
-import Saskatchewan from "../src/assets/img/cbc-saskatchewan.webp";
-import Thunder from "../src/assets/img/cbc-thunder-bay.png";
+import Calgary from "../../assets/img/cbc-calgary.webp";
+import Vancouver from "../../assets/img/cbc-Vancouver.png";
+import Montreal from "../../assets/img/cbc-montreal.png";
+import Toronto from "../../assets/img/cbc-toronto.webp";
+import Manitoba from "../../assets/img/cbc-manitoba.png";
+import Ottawa from "../../assets/img/cbc-ottawa.webp";
+import Edmonton from "../../assets/img/cbc-edmonton.webp";
+import Saskatchewan from "../../assets/img/cbc-saskatchewan.webp";
+import Thunder from "../../assets/img/cbc-thunder-bay.png";
+import Ohdio from "../../assets/img/cbc-ohdio.png";
 
-class Homepage extends Component {
+class LocalList extends Component {
   state = {
     url: null,
     pip: false,
@@ -83,18 +85,22 @@ class Homepage extends Component {
     const SEPARATOR = " · ";
 
     return (
-        <DictaphoneState>
-          <div className="container text-center">
-            <h1>Live transcription Radio</h1>
-            <div className="main__container">
-              <section className="transcription__container">
-                <Dictaphone browserSupportsSpeechRecognition />
-                <Transcript />
-              </section>
-
-              <section className="radioList">
-                <th>Local Radio Station </th>
-                <td className="radioList__buttons">
+      <DictaphoneState>
+        <div className="container text-center">
+          <h1>Live transcription Radio</h1>
+          <div className="main__container">
+            <section className="transcription__container">
+              <div className="transcription__notes">
+                {" "}
+                📝 Transcription notes{" "}
+              </div>
+              <Transcript />
+              <Dictaphone browserSupportsSpeechRecognition />
+            </section>
+            <section className="radioList">
+              <th>Local Radio Station </th>
+              <td className="radioList__buttons">
+                <Link to="/local?lang=en-CA&city=calgary&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -108,6 +114,8 @@ class Homepage extends Component {
                       alt="cbc calgary logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&city=vancouver&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -121,6 +129,8 @@ class Homepage extends Component {
                       alt="cbc vancouver logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&city=montreal&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -134,6 +144,8 @@ class Homepage extends Component {
                       alt="cbc montreal logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&city=toronto&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -147,6 +159,8 @@ class Homepage extends Component {
                       alt="cbc toronto logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&province=manitoba&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -160,6 +174,8 @@ class Homepage extends Component {
                       alt="cbc manitoba logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&city=ottawa&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -173,6 +189,8 @@ class Homepage extends Component {
                       alt="cbc ottawa logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&city=edmonton&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -186,6 +204,8 @@ class Homepage extends Component {
                       alt="cbc edmonton logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&province=saskatchewan&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -199,6 +219,8 @@ class Homepage extends Component {
                       alt="cbc saskatchewan logo"
                     />
                   </button>
+                </Link>
+                <Link to="/local?lang=en-CA&city=thunderbay&channel=cbc-radio-one">
                   <button
                     onClick={() =>
                       this.setState({
@@ -212,50 +234,66 @@ class Homepage extends Component {
                       alt="cbc thunder bay logo"
                     />
                   </button>
-                </td>
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    ref={this.ref}
-                    className="react-player"
-                    width="5%"
-                    height="5%"
-                    url={url}
-                    pip={pip}
-                    playing={playing}
-                    controls={controls}
-                    light={light}
-                    loop={loop}
-                    playbackRate={playbackRate}
-                    volume={volume}
-                    muted={muted}
-                    onReady={() => console.log("onReady")}
-                    onStart={() => console.log("onStart")}
-                    onPlay={this.handlePlay}
-                    onEnablePIP={this.handleEnablePIP}
-                    onDisablePIP={this.handleDisablePIP}
-                    onPause={this.handlePause}
-                    onBuffer={() => console.log("onBuffer")}
-                    onPlaybackRateChange={this.handleOnPlaybackRateChange}
-                    onSeek={(e) => console.log("onSeek", e)}
-                    onEnded={this.handleEnded}
-                    onError={(e) => console.log("onError", e)}
-                    onProgress={this.handleProgress}
-                    onDuration={this.handleDuration}
-                  />
-                  {/* <button onClick={this.handleStop}>Stop</button> */}
+                </Link>
+                <Link to="/local?lang=fr-FR&country=canada&channel=ohdio">
                   <button
-                    className="player__pause"
-                    onClick={this.handlePlayPause}
+                    onClick={() =>
+                      this.setState({
+                        url: "https://rcavliveaudio.akamaized.net/hls/live/2006635/P-2QMTL0_MTL/playlist.m3u8",
+                      })
+                    }
                   >
-                    {playing ? "⏸️ " : "▶️"}
+                    <img
+                      className="radioList__img"
+                      src={Ohdio}
+                      alt="cbc ohdio logo"
+                    />
                   </button>
-                </div>
-              </section>
-            </div>
+                </Link>
+              </td>
+              <div className="player-wrapper">
+                <ReactPlayer
+                  ref={this.ref}
+                  className="react-player"
+                  width="5%"
+                  height="5%"
+                  url={url}
+                  pip={pip}
+                  playing={playing}
+                  controls={controls}
+                  light={light}
+                  loop={loop}
+                  playbackRate={playbackRate}
+                  volume={volume}
+                  muted={muted}
+                  onReady={() => console.log("onReady")}
+                  onStart={() => console.log("onStart")}
+                  onPlay={this.handlePlay}
+                  onEnablePIP={this.handleEnablePIP}
+                  onDisablePIP={this.handleDisablePIP}
+                  onPause={this.handlePause}
+                  onBuffer={() => console.log("onBuffer")}
+                  onPlaybackRateChange={this.handleOnPlaybackRateChange}
+                  onSeek={(e) => console.log("onSeek", e)}
+                  onEnded={this.handleEnded}
+                  onError={(e) => console.log("onError", e)}
+                  onProgress={this.handleProgress}
+                  onDuration={this.handleDuration}
+                />
+                {/* <button onClick={this.handleStop}>Stop</button> */}
+                <button
+                  className="player__pause"
+                  onClick={this.handlePlayPause}
+                >
+                  {playing ? "⏸️ " : "▶️"}
+                </button>
+              </div>
+            </section>
           </div>
-        </DictaphoneState>
+        </div>
+      </DictaphoneState>
     );
   }
 }
 
-export default Homepage;
+export default LocalList;

@@ -6,16 +6,14 @@ import SpeechRecognition, {
 import DictaphoneContext from "../../context/dictaphone/dictaphoneContext";
 import isChrome from "../../utils/checkIfChrome";
 
-const Dictaphone = ({
-  startListening,
-  stopListening,
-}) => {
-  const [transcribing, setTranscribing] = useState(true)
-  const [clearTranscriptOnListen, setClearTranscriptOnListen] = useState(true)
-  const toggleTranscribing = () => setTranscribing(!transcribing)
-  const toggleClearTranscriptOnListen = () => setClearTranscriptOnListen(!clearTranscriptOnListen)
+const Dictaphone = ({ startListening, stopListening }) => {
+  const [transcribing, setTranscribing] = useState(true);
+  const [clearTranscriptOnListen, setClearTranscriptOnListen] = useState(true);
+  const toggleTranscribing = () => setTranscribing(!transcribing);
+  const toggleClearTranscriptOnListen = () =>
+    setClearTranscriptOnListen(!clearTranscriptOnListen);
   const dictaphoneContext = useContext(DictaphoneContext);
- 
+
   const {
     transcript,
     interimTranscript,
@@ -24,8 +22,8 @@ const Dictaphone = ({
     listening,
     browserSupportsSpeechRecognition,
     isMicrophoneAvailable,
-  } = useSpeechRecognition({ transcribing, clearTranscriptOnListen })
- 
+  } = useSpeechRecognition({ transcribing, clearTranscriptOnListen });
+
   const { updateTranscript, clearTranscript, startListen, stopListen } =
     dictaphoneContext;
 
@@ -36,18 +34,25 @@ const Dictaphone = ({
     // eslint-disable-next-line
   }, [finalTranscript]);
 
-  const listenContinuouslyInChinese = () => SpeechRecognition.startListening({
-    continuous: true,
-    language: 'zh-CN'
-  })
+  const listenContinuouslyInChinese = () =>
+    SpeechRecognition.startListening({
+      continuous: true,
+      language: "zh-CN",
+    });
 
   if (!browserSupportsSpeechRecognition)
     return <div style={{ color: "red" }}>Browser does not supports this</div>;
 
-  const start = () => SpeechRecognition.startListening({
-    continuous: true,
-    language: 'en-GB'
-  });
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const transcriptionLanguage = urlParams.get("lang");
+  console.log(transcriptionLanguage);
+
+  const start = () =>
+    SpeechRecognition.startListening({
+      continuous: true,
+      language: transcriptionLanguage,
+    });
 
   const stop = () => {
     SpeechRecognition.stopListening();
@@ -77,34 +82,45 @@ const Dictaphone = ({
   if (isChrome) {
     return (
       <div>
-        <button onClick={listenContinuouslyInChinese}>
+        {/* <button onClick={listenContinuouslyInChinese}>
           Listen continuously-Chinese
-        </button>
+        </button> */}
 
         {listening ? (
-          <div className="card bg-warning text-left transcription__text">
+          <div className="card bg-warning text-left text-reminder transcription__text">
             {transcript
-              ? "Live transcribing ✏️... " + transcript
+              ? "Live transcribing ✏️..." + transcript
               : "🎙️ Wait for audio input..."}
           </div>
         ) : (
-          <div className="card text-left">
-            Here, you can see what are being transcribed.
-          </div>
+          <>
+            <div className="card text-left">
+              <span>☮️ Here, you can see what are being transcribed.</span>
+              <span>☮️ Speech recognition is not exactly accurate, approximately 70%~90%.</span>
+            </div>
+          </>
         )}
         {listening ? (
-          <button className="btn btn-danger btn-block" onClick={stop}>
-            Stop
-          </button>
+          <div className="transcription__initial-button">
+            <button
+              className="btn btn-danger btn-block transcription__initial-button"
+              onClick={stop}
+            >
+              Stop
+            </button>
+          </div>
         ) : (
-          <>
+          <div className="transcription__initial-button">
             <button className="btn btn-success btn-block" onClick={start}>
               Start
             </button>
-            <button className="btn btn-success btn-block" onClick={listenContinuouslyInChinese}>
+            {/* <button
+              className="btn btn-success btn-block"
+              onClick={listenContinuouslyInChinese}
+            >
               Start CN
-            </button>
-          </>
+            </button> */}
+          </div>
         )}
         {/* <button className="btn btn-info btn-block" onClick={reset}>
           Reset

@@ -1,6 +1,6 @@
 #transcript {
     overflow-y: scroll;
-    height: 60vh;
+    max-height: 50vh;
 }
 
 
