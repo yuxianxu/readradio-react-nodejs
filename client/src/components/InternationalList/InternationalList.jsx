@@ -140,94 +140,94 @@ class InternationalList extends Component {
                     /> */}
                   </button>
                 </Link>
-                <Link to="/international/toronto">
+                <Link to="/international?lang=de-DE&country=german&channel=1diggi">
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8",
+                        url: "https://wdrhf.akamaized.net/hls/live/2027963/1livediggi/96/seglist.m3u8",
                       })
                     }
-                  >
-                    <img
+                  >🇩🇪 WDR 1 Live
+                    {/* <img
                       className="radioList__img"
                       src={Toronto}
                       alt="cbc toronto logo"
-                    />
+                    /> */}
                   </button>
                 </Link>
-                <Link to="/international/manitoba">
+                <Link to="/international?lang=es-MX&country=mexico&channel=Amor">
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_WPG@384111/master.m3u8",
+                        url: "https://13743.live.streamtheworld.com/XHSHFM_ADP/HLS/21764/0/playlist.m3u8",
                       })
                     }
-                  >
-                    <img
+                  >🇲🇽 Amor 95.3
+                    {/* <img
                       className="radioList__img"
                       src={Manitoba}
                       alt="cbc manitoba logo"
-                    />
+                    /> */}
                   </button>
                 </Link>
-                <Link to="/international/ottawa">
+                <Link to="/international?lang=ru&country=russia&channel=avtoradio">
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_OTT@348188/master.m3u8",
+                        url: "http://online.echoekb.ru:8000/echoekb?type=.mp3/;stream.mp3",
                       })
                     }
-                  >
-                    <img
+                  >🇷🇺 Moscow
+                    {/* <img
                       className="radioList__img"
                       src={Ottawa}
                       alt="cbc ottawa logo"
-                    />
+                    /> */}
                   </button>
                 </Link>
-                <Link to="/international/edmonton">
+                <Link to="/international?lang=zh-TW&channel=rti">
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_EDM@372985/master.m3u8",
+                        url: "https://www.soundvideostar.com/live/_definst_/rti3/chunklist_w1129242241.m3u8",
                       })
                     }
-                  >
-                    <img
+                  >🇹🇼 華語線上
+                    {/* <img
                       className="radioList__img"
                       src={Edmonton}
                       alt="cbc edmonton logo"
-                    />
+                    /> */}
                   </button>
                 </Link>
-                <Link to="/international/saskatchewan">
+                <Link to="/international?lang=en-US&country=us&channel=kiss-fm1027">
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_REG@118346/master.m3u8",
+                        url: "https://rogers-hls.leanstream.co/rogers/kin1027.stream/playlist.m3u8?environment=web&args=web_01",
                       })
                     }
-                  >
-                    <img
+                  >🇺🇸 LA KISS
+                    {/* <img
                       className="radioList__img"
                       src={Saskatchewan}
                       alt="cbc saskatchewan logo"
-                    />
+                    /> */}
                   </button>
                 </Link>
-                <Link to="/international/thunderbay">
+                <Link to="/international?lang=en-US&country=us&channel=y100">
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TBA@366707/master.m3u8",
+                        url: "https://n14b-e2.revma.ihrhls.com/zc561/20_tqnuaiqqzhdr02/playlist.m3u8?rj-ttl=5&pname=live_profile&companionAds=false&dist=iheart&terminalId=163&deviceName=web-desktop&rj-tok=AAABfo_pCP0AQfsabzZg4mpzSA&aw_0_1st.playerid=iHeartRadioWebPlayer&listenerId=98cafe80fe7fbe7be2c5581eb191a2b5&clientType=web&profileId=1644469835&aw_0_1st.skey=1644469835&host=webapp.CA&playedFrom=157&stationid=561&territory=CA",
                       })
                     }
-                  >
-                    <img
+                  >🇺🇸  Miami Y100
+                    {/* <img
                       className="radioList__img"
                       src={Thunder}
                       alt="cbc thunder bay logo"
-                    />
+                    /> */}
                   </button>
                 </Link>
               </td>
