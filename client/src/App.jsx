@@ -8,6 +8,7 @@ import LocalList from "./components/LocalList/LocalList";
 import MyNotes from "./Pages/MyNotes/MyNotes";
 import Login from "./Pages/Login";
 import InternationalList from "./components/InternationalList/InternationalList";
+import Homepage from "./Pages/Homepage/Homepage";
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
       <div className="main">
         <Header user={user} />
         <Routes>
+          <Route path="/" exact element={<Homepage />} />
           <Route path="/local/*" element={<LocalList />} />
           <Route
             path="/login"

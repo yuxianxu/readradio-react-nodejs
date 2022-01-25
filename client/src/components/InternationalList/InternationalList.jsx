@@ -159,7 +159,7 @@ class InternationalList extends Component {
                   <button
                     onClick={() =>
                       this.setState({
-                        url: "https://13743.live.streamtheworld.com/XHSHFM_ADP/HLS/21764/0/playlist.m3u8",
+                        url: "https://18393.live.streamtheworld.com/WRADIOAAC.aac?csegid=12000&gdpr=0&dist=wradio_co-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&sbmid=8da5bd67-1330-4dca-f6cf-cfe504937938",
                       })
                     }
                   >🇲🇽 Amor 95.3
