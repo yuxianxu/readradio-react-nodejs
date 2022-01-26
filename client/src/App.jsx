@@ -9,6 +9,7 @@ import MyNotes from "./Pages/MyNotes/MyNotes";
 import Login from "./Pages/Login";
 import InternationalList from "./components/InternationalList/InternationalList";
 import Homepage from "./Pages/Homepage/Homepage";
+import WishList from "./Pages/WishList/WishList";
 
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
             path="/international/*"
             element={user ? <InternationalList /> : <Navigate to="/login" />}
           />
+          <Route path="/wishlist" exact element={<WishList />} />
           {/* <Route exact path="/support" component={Support}/> */}
         </Routes>
       </div>
