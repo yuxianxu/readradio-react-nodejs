@@ -111,7 +111,7 @@ const Dictaphone = ({ startListening, stopListening }) => {
           </div>
         ) : (
           <div className="transcription__initial-button">
-            <button className="btn btn-success btn-block" onClick={start}>
+            <button className="btn btn-success btn__start btn-block" onClick={start}>
               Start
             </button>
             {/* <button

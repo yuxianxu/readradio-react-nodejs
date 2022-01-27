@@ -62,6 +62,7 @@ const App = () => {
           <Route path="/wishlist" exact element={<WishList />} />
           {/* <Route exact path="/support" component={Support}/> */}
         </Routes>
+        {/* <Footer/> */}
       </div>
     </BrowserRouter>
   );

@@ -28,7 +28,7 @@ class MyNotes extends Component {
             <div>
                 MyNotes
             </div>
-            <div>
+            <div className='mynotes'>
                 {this.state.notesList.map((note) => {
                     let normalDate = new Date(note.timestamp);
                     let noteDate = normalDate.toLocaleString("en-US");
@@ -38,7 +38,7 @@ class MyNotes extends Component {
                             <div>
                                 {noteDate}
                             </div>
-                            <div>
+                            <div className='mynotes__content'>
                                 {note.transcript}
                             </div>
                         </li>

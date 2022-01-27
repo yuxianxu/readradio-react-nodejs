@@ -11,8 +11,9 @@ const Header = ({ user }) => {
   return (
     <div className="navbar">
       <span className="listItem">
-        <Link className="link" to="/">
+        <Link className="link logo__container" to="/">
           <img src={Logo} className="logo" alt="logo" />
+          <span className="logo__text">ReadRadio</span>
         </Link>
       </span>
       <span className="listItem">
