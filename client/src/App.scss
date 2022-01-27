@@ -1098,9 +1098,17 @@ input {
       width: 15rem;
       z-index: 9;
       padding-top: 11rem;
-      padding-right: 1rem;
+      padding-left: 1rem;
     }
   }
+
+  &__hero {
+    &-gray {
+      color: #888;
+    }
+  }
+
+
 
   &__description {
     background-size: cover;

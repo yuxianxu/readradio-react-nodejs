@@ -49,11 +49,11 @@ const Homepage = () => {
             <div className="main__promotion main__promotion-text">
               <div className="main__free">
                 <p>100% Free</p>
-                <p>Unlimited time</p>
+                <p className="main__hero-gray">Unlimited time</p>
               </div>
               <div className="main__language">
                 <p>76 + </p>
-                <p>Languages Supported</p>
+                <p className="main__hero-gray">Languages Supported</p>
               </div>
             </div>
           </div>
