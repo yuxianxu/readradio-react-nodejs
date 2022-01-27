@@ -4,7 +4,7 @@ import "./Footer.scss";
 function Footer() {
     return (
         <div>
-            This is footer
+            <p>♥️wish list</p>
         </div>
     )
 
