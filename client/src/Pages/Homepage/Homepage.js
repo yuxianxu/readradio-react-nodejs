@@ -4,6 +4,8 @@ import BackgroundImgLang from "../../assets/img/language.png";
 import BackgroundImgLangTwo from "../../assets/img/language-2.png";
 import BackgroundImgLinkedin from "../../assets/img/linkedin.png";
 import BackgroundImgTech from "../../assets/img/tech.png";
+import BackgroundImgEducator from "../../assets/img/educators.png";
+import BackgroundImgFamily from "../../assets/img/family.png";
 import BackgroundImgSecond from "../../assets/img/wave1.svg";
 import BackgroundVideo from "../../assets/img/night-sky-7s.mp4";
 
@@ -198,17 +200,21 @@ const Homepage = () => {
           <div className="about__text-container">
             {/* <h1>Who need ReadRadio?</h1> */}
             {/* <p className="main__text-one">- new language learners</p> */}
-            <p className="main__text-one"><img className="main__text-linkedin" src={BackgroundImgLinkedin}/> </p>
-            <p className="main__text-one">linkedin.com/in/yuxianxu</p>
+            {/* <p className="main__text-one">- new language learners</p> */}
+            <p className="main__text-one"><img className="main__text-educators" src={BackgroundImgEducator}/> </p>
+            
+            {/* <p className="main__text-one">- auditory disabilities</p> */}
           </div>
           <div className="about__text-container">
-            <h1>About developer</h1>
+            <h1>Thanks</h1>
+            {/* <p className="main__text-one">- new language learners</p> */}
+            {/* <p className="main__text-one">- new language learners</p>
+            <p className="main__text-one">- auditory disabilities</p> */}
           </div>
-          <div className="about__text-container">
-            {/* <h1>Accurate?</h1> */}
-            {/* <span></span> */}
-            <p className="main__text-one"> 📧 yuxian.xu@gmail.com </p>
-            <p className="main__text-one"> 🦄 github.com/yuxianxu</p>
+          <div className="about__text-family">
+            <h1>Family</h1>
+            <p className="main__text-one"><img className="main__text-family" src={BackgroundImgFamily}/> </p>
+
           </div>
         </div>
         <svg
@@ -222,7 +228,7 @@ const Homepage = () => {
             d="M0,128L40,138.7C80,149,160,171,240,170.7C320,171,400,149,480,154.7C560,160,640,192,720,176C800,160,880,96,960,85.3C1040,75,1120,117,1200,144C1280,171,1360,181,1400,186.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
           ></path>
         </svg>
-        <div class="social"></div>
+      
       </section>
       <section className="about__one">
         <svg
@@ -238,16 +244,19 @@ const Homepage = () => {
         </svg>
         <div className="about__text">
           <div className="about__text-container">
-            <h1>Who need ReadRadio?</h1>
+            {/* <h1>Who need ReadRadio?</h1> */}
             {/* <p className="main__text-one">- new language learners</p> */}
-            <p className="main__text-one">- new language learners</p>
-            <p className="main__text-one">- auditory disabilities</p>
+            <p className="main__text-one"><img className="main__text-linkedin" src={BackgroundImgLinkedin}/> </p>
+            <p className="main__text-one">linkedin.com/in/yuxianxu</p>
           </div>
           <div className="about__text-container">
-            <h1>Accurate?</h1>
-            <span></span>
-            <p className="main__text-one">☮️ </p>
-            <p className="main__text-one">approximately 70%~90%.</p>
+            <h1>About developer</h1>
+          </div>
+          <div className="about__text-container">
+            {/* <h1>Accurate?</h1> */}
+            {/* <span></span> */}
+            <p className="main__text-one"> 📧 yuxian.xu@gmail.com </p>
+            <p className="main__text-one"> 🦄 github.com/yuxianxu</p>
           </div>
         </div>
         <svg

@@ -591,14 +591,39 @@ h3 {
   border-radius: 15px;
   font-weight: 700;
   font-size: 1.2em;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   color: #fff;
   border: none;
-  box-shadow: #888 5px 5px 5px;
+
   height: 2rem;
   line-height: 2rem;
   width: 20%;
   overflow: hidden;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.player__bottom {
+  padding-top: 2rem;
+  display: flex;
+  height: 5rem;
+  border-radius: 20px;
+  justify-content: space-around;
+  box-shadow: #888 5px 5px 5px;
+
+  &-wish {
+    border-radius: 15px;
+    border: none;
+    width: 6rem;
+    cursor: pointer;
+    height: 2rem;
+    color: whitesmoke;
+    background-color: #661053;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .radioList {
@@ -1188,6 +1213,15 @@ input {
   &-tech {
     height: 18rem;
     margin-top: -8rem;
+  }
+
+  &-educators {
+    margin-top: -5rem;
+  }
+
+  &-family {
+    margin-top: -3rem;
+    width: 12rem;
   }
 }
 
