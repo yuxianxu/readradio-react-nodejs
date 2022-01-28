@@ -591,14 +591,39 @@ h3 {
   border-radius: 15px;
   font-weight: 700;
   font-size: 1.2em;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   color: #fff;
   border: none;
-  box-shadow: #888 5px 5px 5px;
+
   height: 2rem;
   line-height: 2rem;
   width: 20%;
   overflow: hidden;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.player__bottom {
+  padding-top: 2rem;
+  display: flex;
+  height: 5rem;
+  border-radius: 20px;
+  justify-content: space-around;
+  box-shadow: #888 5px 5px 5px;
+
+  &-wish {
+    border-radius: 15px;
+    border: none;
+    width: 6rem;
+    cursor: pointer;
+    height: 2rem;
+    color: whitesmoke;
+    background-color: #661053;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .radioList {
@@ -982,7 +1007,12 @@ input {
 
 .homepage {
   width: 100%;
-  // background: #f3f4f5;
+  background-size: cover;
+  background-position: center;
+  background-image:linear-gradient(
+    rgba(32, 32, 32, 0.605),
+    rgba(14, 13, 13, 0.562)
+  ), url(./assets/img/background.jpg);
 }
 .showcase {
   height: 100vh;
@@ -1037,6 +1067,10 @@ input {
   z-index: 99;
   width: 100%;
   align-self: baseline;
+
+  &__hero {
+    padding-bottom: -2rem;
+  }
 
   &__background-white {
     z-index: -1;
@@ -1094,6 +1128,8 @@ input {
     }
   }
   &__language {
+
+
     &-img {
       width: 15rem;
       z-index: 9;
@@ -1105,6 +1141,17 @@ input {
   &__hero {
     &-gray {
       color: #888;
+    }
+
+    &-right {
+      padding-left: 12rem;
+    }
+    &-left {
+      padding-left: 5rem;
+    }
+
+    &-button {
+      background-color: #661053;
     }
   }
 
@@ -1152,21 +1199,82 @@ input {
   transform: scale(0.98);
 }
 
-#about {
-  padding: 40px;
-  height: 30vh;
-  text-align: center;
-  z-index: 99;
-  background-color: white;
+.main__text {
+  z-index: 1;
+  &-one {
+    padding: 1rem 0 0.5rem 0;
+    z-index: 11;
+  }
+
+  &-linkedin {
+    width: 2rem;
+  }
+
+  &-tech {
+    height: 18rem;
+    margin-top: -8rem;
+  }
+
+  &-educators {
+    margin-top: -5rem;
+  }
+
+  &-family {
+    margin-top: -3rem;
+    width: 12rem;
+  }
 }
 
-#about p {
+.about {
+
+  &__text {
+    margin-top: -5rem;
+    z-index: 9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__one{
+    margin-top: 10rem;
+    width: 100%;
+    padding: 3rem 0;
+    margin-bottom: 25rem;
+    height: 30vh;
+    text-align: center;
+    z-index: 1;
+    background-color: #f3f4f5;
+
+    &-background {
+      width: 100vw;
+      margin-top: -18rem;
+      z-index: 0;
+    }
+
+    &-bottom {
+      margin-top: 0rem;
+      z-index: 0;
+    }
+
+    &-bottomTwo {
+      margin-top: -5rem;
+      z-index: 0;
+    }
+  }
+}
+
+.brainstation {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.about p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: auto;
 }
 
-#about h2 {
+.about h2 {
   margin: 30px 0;
   color: var(--primary-color);
 }

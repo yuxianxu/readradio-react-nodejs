@@ -297,12 +297,15 @@ class InternationalList extends Component {
                   onDuration={this.handleDuration}
                 />
                 {/* <button onClick={this.handleStop}>Stop</button> */}
-                <button
-                  className="player__pause"
-                  onClick={this.handlePlayPause}
-                >
-                  {playing ? "⏸️ " : "▶️"}
-                </button>
+                <div className="player__bottom">
+                  <button
+                    className="player__pause"
+                    onClick={this.handlePlayPause}
+                  >
+                    {playing ? "⏸️ " : "▶️"}
+                  </button>
+                  <button className="player__bottom-wish">♥️ wish list</button>
+                </div>
               </div>
             </section>
           </div>
