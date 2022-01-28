@@ -5,15 +5,6 @@ import Dictaphone from "../Dictaphone/Dictaphone";
 import Transcript from "../Dictaphone/Transcript";
 import DictaphoneState from "../../context/dictaphone/DictaphoneState";
 import ReactPlayer from "react-player/file";
-import Calgary from "../../assets/img/cbc-calgary.webp";
-import Vancouver from "../../assets/img/cbc-Vancouver.png";
-import Montreal from "../../assets/img/cbc-montreal.png";
-import Toronto from "../../assets/img/cbc-toronto.webp";
-import Manitoba from "../../assets/img/cbc-manitoba.png";
-import Ottawa from "../../assets/img/cbc-ottawa.webp";
-import Edmonton from "../../assets/img/cbc-edmonton.webp";
-import Saskatchewan from "../../assets/img/cbc-saskatchewan.webp";
-import Thunder from "../../assets/img/cbc-thunder-bay.png";
 
 class InternationalList extends Component {
   state = {
@@ -107,17 +98,11 @@ class InternationalList extends Component {
                   }
                 >
                   <NavLink
-                   strict to="/international?lang=zh-CN&city=beijing&channel=fm1039"
-                    
-                  
+                    strict
+                    to="/international?lang=zh-CN&city=beijing&channel=fm1039"
                   >
                     🇨🇳 北京103.9
                   </NavLink>
-                  {/* <img
-                      className="radioList__img"
-                      src={Calgary}
-                      alt="cbc calgary logo"
-                    /> */}
                 </button>
                 <button
                   onClick={() =>
@@ -127,8 +112,8 @@ class InternationalList extends Component {
                   }
                 >
                   <NavLink
-                  
-                   strict to="/international?lang=fr-FR&country=france&channel=inter"
+                    strict
+                    to="/international?lang=fr-FR&country=france&channel=inter"
                   >
                     🇫🇷 France Inter
                   </NavLink>
@@ -145,11 +130,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇫🇷 France Culture
-                    {/* <img
-                      className="radioList__img"
-                      src={Montreal}
-                      alt="cbc montreal logo"
-                    /> */}
                   </button>
                 </NavLink>
                 <NavLink
@@ -164,11 +144,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇩🇪 WDR 1 Live
-                    {/* <img
-                      className="radioList__img"
-                      src={Toronto}
-                      alt="cbc toronto logo"
-                    /> */}
                   </button>
                 </NavLink>
                 <NavLink
@@ -183,11 +158,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇲🇽 Amor 95.3
-                    {/* <img
-                      className="radioList__img"
-                      src={Manitoba}
-                      alt="cbc manitoba logo"
-                    /> */}
                   </button>
                 </NavLink>
                 <NavLink
@@ -202,11 +172,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇷🇺 Moscow
-                    {/* <img
-                      className="radioList__img"
-                      src={Ottawa}
-                      alt="cbc ottawa logo"
-                    /> */}
                   </button>
                 </NavLink>
                 <NavLink
@@ -221,11 +186,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇹🇼 華語線上
-                    {/* <img
-                      className="radioList__img"
-                      src={Edmonton}
-                      alt="cbc edmonton logo"
-                    /> */}
                   </button>
                 </NavLink>
                 <NavLink
@@ -240,11 +200,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇺🇸 LA KISS
-                    {/* <img
-                      className="radioList__img"
-                      src={Saskatchewan}
-                      alt="cbc saskatchewan logo"
-                    /> */}
                   </button>
                 </NavLink>
                 <NavLink
@@ -259,11 +214,6 @@ class InternationalList extends Component {
                     }
                   >
                     🇺🇸 Miami Y100
-                    {/* <img
-                      className="radioList__img"
-                      src={Thunder}
-                      alt="cbc thunder bay logo"
-                    /> */}
                   </button>
                 </NavLink>
               </td>

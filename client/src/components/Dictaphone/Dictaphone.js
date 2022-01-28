@@ -30,8 +30,6 @@ const Dictaphone = ({ startListening, stopListening }) => {
   useEffect(() => {
     updateTranscript(finalTranscript);
     resetTranscript();
-    // console.log(`final: ${finalTranscript}`);
-    // eslint-disable-next-line
   }, [finalTranscript]);
 
   const listenContinuouslyInChinese = () =>
@@ -61,31 +59,10 @@ const Dictaphone = ({ startListening, stopListening }) => {
 
   const API_URL = process.env.REACT_APP_API_URL;
 
-  // const transcriptContent = document.getElementById("transcript");
-  // console.log(transcriptContent)
-
-  // const reset = () => {
-
-  //   // console.log(content)
-
-  //   axios
-  //   .post(`${API_URL}/mynotes`, {
-  //     transcript: content
-  //   })
-  //   .then((res) => console.log(res));
-
-  //   clearTranscript();
-  // };
-
-  // console.log(isChrome);
   let content = null;
   if (isChrome) {
     return (
       <div>
-        {/* <button onClick={listenContinuouslyInChinese}>
-          Listen continuously-Chinese
-        </button> */}
-
         {listening ? (
           <div className="card bg-warning text-left text-reminder transcription__text">
             {transcript
@@ -96,7 +73,6 @@ const Dictaphone = ({ startListening, stopListening }) => {
           <>
             <div className="card text-left">
               <span>☮️ Here, you can see what are being transcribed.</span>
-
             </div>
           </>
         )}
@@ -111,20 +87,14 @@ const Dictaphone = ({ startListening, stopListening }) => {
           </div>
         ) : (
           <div className="transcription__initial-button">
-            <button className="btn btn-success btn__start btn-block" onClick={start}>
+            <button
+              className="btn btn-success btn__start btn-block"
+              onClick={start}
+            >
               Start
             </button>
-            {/* <button
-              className="btn btn-success btn-block"
-              onClick={listenContinuouslyInChinese}
-            >
-              Start CN
-            </button> */}
           </div>
         )}
-        {/* <button className="btn btn-info btn-block" onClick={reset}>
-          Reset
-        </button> */}
       </div>
     );
   } else {

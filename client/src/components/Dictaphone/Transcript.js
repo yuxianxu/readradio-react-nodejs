@@ -29,14 +29,9 @@ const Transcript = () => {
     end !== null ? end.scrollIntoView({ behavior: "smooth" }) : null;
   useEffect(() => {
     scroll();
-    // eslint-disable-next-line
   }, [transcript]);
 
-  // console.log(transcript);
-
   const saveNotes = () => {
-    // console.log(content)
-
     axios
       .post(`${API_URL}/mynotes`, {
         transcript: transcript,
@@ -51,7 +46,7 @@ const Transcript = () => {
   return (
     <Fragment>
       {isChrome ? (
-        <div className="text-left margin-y-2" id="transcript">          
+        <div className="text-left margin-y-2" id="transcript">
           <div className="transcription__content">{content}</div>
           <div className="transcription__time">
             {" "}
