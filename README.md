@@ -21,6 +21,12 @@ ReadRadio is a live speech to text app and used for radio listening.
 - Support save notes and check notes
 - User-generated content by submit wish list for favorite radio stations
 
+## Next sprints
+
+- This is an ongoing project
+- Will update wish list page
+- Add likes and comments features
+
 ## Limit
 
 - Only support Chrome Browser by now
