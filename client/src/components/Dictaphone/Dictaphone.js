@@ -96,7 +96,7 @@ const Dictaphone = ({ startListening, stopListening }) => {
           <>
             <div className="card text-left">
               <span>☮️ Here, you can see what are being transcribed.</span>
-              <span>☮️ Speech recognition is not exactly accurate, approximately 70%~90%.</span>
+
             </div>
           </>
         )}
