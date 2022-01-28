@@ -7,8 +7,10 @@ ReadRadio is a live speech to text app and used for radio listening.
 
 
 ## Authors
-
-- [@Yuxian Xu](https://github.com/yuxianxu)
+@Yuxian Xu
+- [GitHub](https://github.com/yuxianxu)
+- [LinkedIn](https://www.linkedin.com/in/yuxianxu/)
+- [Email](mailto:yuxian.xu@gmail.com)
 
 
 ## Features
