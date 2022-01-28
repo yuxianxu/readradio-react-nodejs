@@ -164,7 +164,7 @@ const Homepage = () => {
             <p className="main__text-one"> From no stack to full stack </p>
             <p className="main__text-one brainstation">
               {" "}
-              -> <a href="www.brainstation">BrainStation</a>
+               <a href="brainstation.io">BrainStation</a>
             </p>
           </div>
         </div>
