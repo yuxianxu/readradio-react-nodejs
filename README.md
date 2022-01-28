@@ -8,7 +8,7 @@ ReadRadio is a live speech to text app and used for radio listening.
 
 ## Authors
 
-- [@Yuxian Xu](yuxian.xu@gmail.com)
+- [@Yuxian Xu](https://github.com/yuxianxu)
 
 
 ## Features
@@ -18,6 +18,12 @@ ReadRadio is a live speech to text app and used for radio listening.
 - Support 76+ languages
 - Support save notes and check notes
 - User-generated content by submit wish list for favorite radio stations
+
+## Limit
+
+- Only support Chrome Browser by now
+- Works on desktop for Windows and Mac Chrome browser
+- Works on android cell pone or tablet with Chrome browser  
 
 
 ## API Reference
@@ -33,13 +39,10 @@ Web API: Speech Recognition
 
 ## Related technologies
 - React player v2.9.0
-- VB-Audio virtual cable
 - React speech recognition v3.9.0
 
 
 ## Screenshots
 
-
-## 
 
 
