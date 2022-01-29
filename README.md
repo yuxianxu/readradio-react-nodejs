@@ -12,6 +12,16 @@ ReadRadio is a live speech to text app and used for radio listening.
 - [LinkedIn](https://www.linkedin.com/in/yuxianxu/)
 - [Email](mailto:yuxian.xu@gmail.com)
 
+## SET UP
+
+- git clone
+- cd server & npm i
+- cd client & npm i
+- Install VB-virtual audio software 
+![VB-audio](vb-audio.com/cable/index.htm)
+![VB virtual audio](https://vb-audio.com/Cable/VBAudioVirtualCablesABCD.gif)
+- Setup audio output and input source on pc
+
 
 ## Features
 
