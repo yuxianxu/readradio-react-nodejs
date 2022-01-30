@@ -8,7 +8,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 const Transcript = () => {
   const dictaphoneContext = useContext(DictaphoneContext);
-  const { transcript, listening, clearTranscript, updateTranscript } =
+  const { transcript, listening, clearTranscript} =
     dictaphoneContext;
   let end = null;
 

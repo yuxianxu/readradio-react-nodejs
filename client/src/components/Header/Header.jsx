@@ -22,7 +22,7 @@ const Header = ({ user }) => {
         </NavLink>
       </span>
       <span className="listItem">
-        <NavLink activeclassname="active" exact to="/local">
+        <NavLink activeclassname="active" exact="true" to="/local">
           Local
         </NavLink>
       </span>
@@ -43,7 +43,7 @@ const Header = ({ user }) => {
             </li>
           </ul>
         ) : (
-          <NavLink activeClassName="active" className="link" to="/login">
+          <NavLink activeclassname="active" className="link" to="/login">
             Login
           </NavLink>
         )}
