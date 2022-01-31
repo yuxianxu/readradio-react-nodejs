@@ -7,11 +7,11 @@ import DictaphoneContext from "../../context/dictaphone/dictaphoneContext";
 import isChrome from "../../utils/checkIfChrome";
 
 const Dictaphone = ({ startListening, stopListening }) => {
-  const [transcribing, setTranscribing] = useState(true);
-  const [clearTranscriptOnListen, setClearTranscriptOnListen] = useState(true);
-  const toggleTranscribing = () => setTranscribing(!transcribing);
-  const toggleClearTranscriptOnListen = () =>
-    setClearTranscriptOnListen(!clearTranscriptOnListen);
+  const [transcribing] = useState(true);
+  const [clearTranscriptOnListen] = useState(true);
+  // const toggleTranscribing = () => setTranscribing(!transcribing);
+  // const toggleClearTranscriptOnListen = () =>
+  //   setClearTranscriptOnListen(!clearTranscriptOnListen);
   const dictaphoneContext = useContext(DictaphoneContext);
 
   const {
@@ -70,7 +70,7 @@ const Dictaphone = ({ startListening, stopListening }) => {
               : "🎙️ Wait for audio input..."}
           </div>
         ) : (
-          <>
+          <>           
             <div className="card text-left">
               <span>☮️ Here, you can see what are being transcribed.</span>
             </div>

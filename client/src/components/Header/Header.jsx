@@ -11,23 +11,23 @@ const Header = ({ user }) => {
   return (
     <div className="navbar">
       <span >
-        <Link exact className="logo__container" to="/">
+        <Link className="logo__container" exact="true" to="/">
           <img src={Logo} className="logo" alt="logo" />
           <span className="logo__text">ReadRadio</span>
         </Link>
       </span>
       <span className="listItem">
-        <NavLink activeClassName="active" exact to="/international">
+        <NavLink activeclassname="active" exact="true" to="/international">
           International
         </NavLink>
       </span>
       <span className="listItem">
-        <NavLink activeClassName="active" exact to="/local">
+        <NavLink activeclassname="active" exact="true" to="/local">
           Local
         </NavLink>
       </span>
       <span className="listItem">
-        <NavLink activeClassName="active" to="/mynotes">
+        <NavLink activeclassname="active" to="/mynotes">
           my notes
         </NavLink>
       </span>
@@ -43,7 +43,7 @@ const Header = ({ user }) => {
             </li>
           </ul>
         ) : (
-          <NavLink activeClassName="active" className="link" to="/login">
+          <NavLink activeclassname="active" className="link" to="/login">
             Login
           </NavLink>
         )}
