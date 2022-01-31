@@ -79,11 +79,7 @@ class InternationalList extends Component {
         <div className="container text-center">
           <h1>Live transcription Radio</h1>
           <div className="main__container">
-            <section className="transcription__container">
-              <div className="transcription__notes">
-                {" "}
-                📝 Transcription notes{" "}
-              </div>
+            <section className="transcription__container">             
               <Transcript />
               <Dictaphone browserSupportsSpeechRecognition />
             </section>
