@@ -528,10 +528,20 @@ h3 {
   padding: 2rem;
 }
 .transcription {
+
+  &__loading {
+    height: 10em;
+  }
+
   &__time {
     color: rgb(94, 90, 90);
     justify-content: flex-end;
     padding: 0.5rem 0;
+  }
+
+  &__bottom-container {
+    width: 100%;
+    text-align: right;
   }
 
   &__initial-button {

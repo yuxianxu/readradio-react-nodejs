@@ -67,6 +67,7 @@ class LocalList extends Component {
     this.player = player;
   };
 
+
   render() {
     const {
       url,
@@ -90,10 +91,10 @@ class LocalList extends Component {
           <h1>Live transcription Radio</h1>
           <div className="main__container">
             <section className="transcription__container">
-              <div className="transcription__notes">
+              {/* <div className="transcription__notes">
                 {" "}
                 📝 Transcription notes{" "}
-              </div>
+              </div> */}
               <Transcript />
               <Dictaphone browserSupportsSpeechRecognition />
             </section>

@@ -70,7 +70,7 @@ const Dictaphone = ({ startListening, stopListening }) => {
               : "🎙️ Wait for audio input..."}
           </div>
         ) : (
-          <>
+          <>           
             <div className="card text-left">
               <span>☮️ Here, you can see what are being transcribed.</span>
             </div>
