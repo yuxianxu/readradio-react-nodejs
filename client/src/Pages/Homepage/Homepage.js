@@ -126,7 +126,7 @@ const Homepage = () => {
           </div>
         </div>
         <svg
-          className="about__one-bottom"
+          className="about__one-accurate"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
@@ -193,8 +193,9 @@ const Homepage = () => {
             d="M0,128L60,117.3C120,107,240,85,360,106.7C480,128,600,192,720,192C840,192,960,128,1080,101.3C1200,75,1320,85,1380,90.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
           ></path>
         </svg>
-        <div className="about__text">
+        <div className="about__text-thanks">
           <div className="about__text-container">
+            <h1>Educators</h1>
             <p className="main__text-one">
               <img
                 className="main__text-educators"
@@ -213,7 +214,7 @@ const Homepage = () => {
           </div>
         </div>
         <svg
-          className="about__one-bottom"
+          className="about__one-family"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
@@ -255,7 +256,7 @@ const Homepage = () => {
           </div>
         </div>
         <svg
-          className="about__one-bottom"
+          className="about__one-contact"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
