@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a62ce1c8.chunk.css",
+    "main.js": "/static/js/main.fae7177e.chunk.js",
+    "main.js.map": "/static/js/main.fae7177e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.839e6e95.js",
+    "runtime-main.js.map": "/static/js/runtime-main.839e6e95.js.map",
+    "static/js/2.2f031706.chunk.js": "/static/js/2.2f031706.chunk.js",
+    "static/js/2.2f031706.chunk.js.map": "/static/js/2.2f031706.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.844de21803537362b93839f694110e05.js": "/precache-manifest.844de21803537362b93839f694110e05.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a62ce1c8.chunk.css.map": "/static/css/main.a62ce1c8.chunk.css.map",
+    "static/js/2.2f031706.chunk.js.LICENSE": "/static/js/2.2f031706.chunk.js.LICENSE",
+    "static/media/App.scss": "/static/media/background.1d0ac697.jpg",
+    "static/media/cbc-Vancouver.png": "/static/media/cbc-Vancouver.25a831a4.png",
+    "static/media/cbc-calgary.webp": "/static/media/cbc-calgary.9cfeb684.webp",
+    "static/media/cbc-edmonton.webp": "/static/media/cbc-edmonton.ecd374e8.webp",
+    "static/media/cbc-manitoba.png": "/static/media/cbc-manitoba.e516968a.png",
+    "static/media/cbc-montreal.png": "/static/media/cbc-montreal.9965f85e.png",
+    "static/media/cbc-ohdio.png": "/static/media/cbc-ohdio.a3399b81.png",
+    "static/media/cbc-ottawa.webp": "/static/media/cbc-ottawa.686ab7bd.webp",
+    "static/media/cbc-saskatchewan.webp": "/static/media/cbc-saskatchewan.b2847083.webp",
+    "static/media/cbc-thunder-bay.png": "/static/media/cbc-thunder-bay.b283a413.png",
+    "static/media/cbc-toronto.webp": "/static/media/cbc-toronto.27baef7f.webp",
+    "static/media/educators.png": "/static/media/educators.197f538b.png",
+    "static/media/family.png": "/static/media/family.54730d44.png",
+    "static/media/language-2.png": "/static/media/language-2.96854540.png",
+    "static/media/language.png": "/static/media/language.45df7cb2.png",
+    "static/media/linkedin.png": "/static/media/linkedin.15fd5adb.png",
+    "static/media/logo-readradio.png": "/static/media/logo-readradio.f5fd125e.png",
+    "static/media/night-sky-7s.mp4": "/static/media/night-sky-7s.89140c2b.mp4",
+    "static/media/sky-night-27s.jpg": "/static/media/sky-night-27s.22e8ecb7.jpg",
+    "static/media/tech.png": "/static/media/tech.2483c58a.png",
+    "static/media/wave1.svg": "/static/media/wave1.8698c06a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.839e6e95.js",
+    "static/js/2.2f031706.chunk.js",
+    "static/css/main.a62ce1c8.chunk.css",
+    "static/js/main.fae7177e.chunk.js"
+  ]
+}
