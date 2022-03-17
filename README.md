@@ -5,6 +5,8 @@ This app is my capstone project at web development bootcamp - [BrainStation](bra
 
 ReadRadio is a live speech to text app and used for radio listening. 
 
+Note: Will update homepage layout soon.
+
 
 ## Authors
 @Yuxian Xu
