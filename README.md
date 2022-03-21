@@ -57,7 +57,7 @@ Web API: Speech Recognition
 
 **Client:** React, HTML, SASS, JS
 
-**Server:** Node, Express, Passport
+**Server:** Node, Express, Passport, Heroku
 
 ## Related technologies
 - React player v2.9.0
