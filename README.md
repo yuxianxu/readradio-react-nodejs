@@ -20,8 +20,8 @@ Note: Will update homepage layout soon.
 ## SET UP
 
 - git clone
-- cd server & npm i
-- cd client & npm i
+- cd server & npm i to start server
+- cd client & npm i to start client
 - Install VB-virtual audio software [VB-audio](https://vb-audio.com/Cable/index.htm)
 ![VB virtual audio](https://vb-audio.com/Cable/VBAudioVirtualCablesABCD.gif)
 - Setup audio output and input source on pc
