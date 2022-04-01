@@ -3,9 +3,11 @@
 
 This app is my capstone project at web development bootcamp - [BrainStation](brainstation.io)
 
-ReadRadio is a live speech to text app and used for radio listening. 
+ReadRadio is a live speech to text app and used for radio listening
 
-Note: Will update homepage layout soon.
+Note: 
+- Will update homepage layout soon
+- Need install VBL audio software to catch output audio from speaker source
 
 
 ## Authors
