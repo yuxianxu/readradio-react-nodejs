@@ -7,7 +7,7 @@ ReadRadio is a live speech to text app and used for radio listening
 
 Note: 
 - Will update homepage layout soon
-- Need install VBL audio software to catch output audio from speaker source
+- Need to install VBL audio software to catch output audio from speaker source - see SET UP for details
 
 
 ## Authors
