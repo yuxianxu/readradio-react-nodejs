@@ -34,7 +34,8 @@ Note:
 
 - Live stream media player inside 
 - Live radio, real-time transcription
-- Support 76+ languages
+- Local radio stations list, international list
+- Support 76+ languages 
 - Support save notes and check notes
 - User-generated content by submit wish list for favorite radio stations
 
