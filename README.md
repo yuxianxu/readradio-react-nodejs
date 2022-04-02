@@ -47,7 +47,7 @@ Note:
 
 ## Limit
 
-- Only support Chrome Browser by now
+- Only support Chrome Browser, transcription not available on mobile by now
 - Works on desktop for Windows and Mac Chrome browser
 - Works on android cell pone or tablet with Chrome browser  
 
