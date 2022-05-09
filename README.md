@@ -1,7 +1,7 @@
 
 # ReadRadio
 
-This app is my capstone project at web development bootcamp - [BrainStation](brainstation.io)
+This app is my capstone project in web development bootcamp - [BrainStation](brainstation.io)
 
 ReadRadio is a live speech to text app and used for radio listening
 
